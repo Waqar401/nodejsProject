@@ -5,7 +5,7 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
-const port = Process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const productRouter = require("./routes/product"); // for Route Product
 const orderRouter = require("./routes/order"); // for Route Order
 const userRouter = require("./routes/user"); // for Route User
@@ -17,5 +17,5 @@ app.use(orderRouter);
 app.use(userRouter);
 
 app.listen(port, () => {
-  console.log(`Server Stared: http://localhost:${port}`);
+  console.log(`Server Started at http://localhost:${port}`);
 });
