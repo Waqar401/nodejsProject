@@ -5,6 +5,7 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
+const port = Process.env.PORT || 3000;
 const productRouter = require("./routes/product"); // for Route Product
 const orderRouter = require("./routes/order"); // for Route Order
 const userRouter = require("./routes/user"); // for Route User
@@ -15,6 +16,6 @@ app.use(productRouter);
 app.use(orderRouter);
 app.use(userRouter);
 
-app.listen(4000, () => {
-  console.log("Server Stared: http://localhost:4000");
+app.listen(port, () => {
+  console.log(`Server Stared: http://localhost:${port}`);
 });
