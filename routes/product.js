@@ -4,6 +4,10 @@ const Product = require("../models/product");
 const Review = require("../models/review");
 const Category = require("../models/category");
 
+// Home Page
+router.get("/", (req, res) => {
+  res.status(201).send("Welcome to Home Page");
+})
 
 // Show All Products 
 router.get("/product", async (req, res) => {
