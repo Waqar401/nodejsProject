@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
 // Show All Products 
 router.get("/product", async (req, res) => {
   try {
-    const product = await Review.find({});
+    const product = await Product.find({});
     res.status(201).send(product)
   } catch (err) {
     res.status(400).send('Error to find product : ' + err.message);
